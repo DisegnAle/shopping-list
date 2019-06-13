@@ -47,6 +47,10 @@ module.exports = {
         options: vueLoaderConfig
       },
       {
+        test: /\.less$/,
+        loader: 'less-loader', // compiles Less to CSS
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]

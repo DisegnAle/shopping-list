@@ -4,12 +4,15 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>HelloCordova</name>
+    <feature name="Clipboard">
+        <param name="android-package" value="com.verso.cordova.clipboard.Clipboard" />
+    </feature>
+    <name>Lista spesa</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A sample Apache Cordova application built with vueJs
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="alessio.scaiola@exmachina.ch" href="http://cordova.io">
+        Alessio Scaiola
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -21,7 +24,4 @@
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
-    <feature name="Clipboard">
-        <param name="android-package" value="com.verso.cordova.clipboard.Clipboard" />
-    </feature>
 </widget>
