@@ -8,8 +8,8 @@ import firebase from 'firebase/app'
 import store from '@/store/store.js'
 import 'firebase/firestore'
 import Clipboard from 'v-clipboard'
-import Element from 'element-ui'
-Vue.use(Element)
+import ElementUI from 'element-ui'
+Vue.use(ElementUI)
 Vue.use(Clipboard)
 Vue.use(firestorePlugin)
 firebase.initializeApp({
@@ -17,6 +17,12 @@ firebase.initializeApp({
   databaseURL: 'https://lista-spesa-86111.firebaseio.com'
 })
 export const db = firebase.firestore()
+
+Vue.filter('capitalize', function (value) {
+  if (!value) return ''
+  value = value.toString()
+  return value.charAt(0).toUpperCase() + value.slice(1)
+})
 
 Vue.config.productionTip = false
 

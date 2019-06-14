@@ -1,12 +1,12 @@
 <template>
    <section>
-       <div v-for="(categoryContent, categoryType) in products" v-bind:key="categoryType">
+       <el-row v-for="(categoryContent, categoryType) in products" v-bind:key="categoryType">
         <products-category :category-type="categoryType" :category-content="categoryContent"></products-category>
-       </div>
+       </el-row>
 
-       <div>
-         <button @click="copyToClipBoard()">COPIA NEGLI APPUNTI</button>
-       </div>
+       <el-row>
+          <el-button @click="copyToClipBoard()">COPIA NEGLI APPUNTI</el-button>
+       </el-row>
    </section>
 </template>
 
